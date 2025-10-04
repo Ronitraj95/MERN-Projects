@@ -1,0 +1,93 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.tdp-page-container {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: linear-gradient(to bottom right, #ec8218, #d7a317);
+}
+
+.tdp-heading-gradient {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #0d0d0d, #1f1e1d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 2.5rem;
+}
+
+.tdp-grid-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1400px;
+  flex-grow: 1;
+  padding: 2rem 0;
+}
+
+.tdp-flip-card-wrapper {
+  background: transparent;
+  width: 100%;
+  max-width: 300px;
+  height: 320px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.tdp-card-inner-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.tdp-flip-card-wrapper:hover .tdp-card-inner-wrap {
+  transform: rotateY(180deg);
+}
+
+.tdp-front-view,
+.tdp-back-view {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.tdp-front-view {
+  z-index: 2;
+}
+
+.tdp-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tdp-back-view {
+  transform: rotateY(180deg);
+  background-color: #1f2937;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.tdp-card-description {
+  font-size: 0.95rem;
+  color: #ccc;
+  text-align: center;
+}

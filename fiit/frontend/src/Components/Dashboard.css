@@ -1,0 +1,368 @@
+.dashboard-main {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+
+.dashboard-container {
+  flex: 1;
+  background: linear-gradient(90deg, #ffde59, #ffa534);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.dashboard-card-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notification-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+
+/* 🔔 Bell button style */
+.notification-bell {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.2s ease;
+}
+
+.notification-dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  height: 10px;
+  width: 10px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.notification-bell:hover {
+  transform: scale(1.2);
+}
+
+/* 📩 Plan display card */
+.latest-plan-card {
+  margin-top: 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1rem 1.5rem;
+  border-radius: 14px;
+  color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+.plan-popup {
+  position: absolute;
+  top: -5px;
+  right: 50px;
+  width: 200px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 10px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: slideInFromRight 0.4s ease-out;
+  z-index: 9;
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #111;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.info-card {
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.info-label {
+  font-size: 0.875rem;
+  color: #cccccc;
+}
+
+.info-value {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.info-subtext {
+  font-size: 0.75rem;
+  color: #aaaaaa;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.chart-card {
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 0.75rem;
+  height: 250px;
+  overflow: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.chart-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.goal-card {
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.goal-item {
+  margin-bottom: 1rem;
+}
+
+.goal-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: #dddddd;
+}
+
+.goal-bar {
+  background: #333;
+  height: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.goal-fill {
+  background: #ffffff;
+  height: 8px;
+}
+
+.goal-progress {
+  background: #1e1e1e;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.progress-percentage {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.progress-note {
+  color: #cccccc;
+  font-size: 0.875rem;
+}
+
+.profile-sidebar-wrapper {
+  flex: 1;
+  min-width: 260px;
+  max-width: 300px;
+}
+
+.profile-sidebar {
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.profile-card {
+  text-align: center;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #dfd009;
+  box-shadow: 0 0 10px #ffdd0088;
+  margin-bottom: 1rem;
+}
+
+.profile-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.profile-detail {
+  font-size: 0.875rem;
+  color: #bbbbbb;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.profile-section {
+  margin-top: 1.5rem;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #a5b4fc;
+}
+
+.section-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section-list li {
+  background: linear-gradient(90deg, #242422, #ffa534);
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+.profile-action-button {
+  padding: 0.5rem 1rem;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.profile-action-button.logout {
+  background: #ef4444;
+}
+
+.profile-action-button:hover {
+  opacity: 0.9;
+}
+.nav-button {
+  padding: 0.5rem 1rem;
+  background: #010101;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.nav-button:hover {
+  background: linear-gradient(90deg, #de4217, #ffa534);
+}
+
+.profile-info-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.info-box {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  flex: 1;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
+
+.profile-button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.profile-button-grid .nav-button {
+  width: 100%;
+  height: 48px;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+.profile-nav-button {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(90deg, #242422, #ffa534);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.profile-nav-button:hover {
+  background: linear-gradient(90deg, #de4217, #ffa534);
+}

@@ -1,0 +1,118 @@
+.adminDash_root {
+  padding: 2rem;
+  background: linear-gradient(to right, #e77b7b, #d4d5e0);
+  min-height: 100vh;
+  color: rgb(3, 3, 3);
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+}
+
+.adminDash_title {
+  font-size: 2.5rem;
+  color: #030302;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px black;
+}
+
+.adminDash_section {
+  margin-top: 3rem;
+}
+
+.adminDash_sectionTitle {
+  font-size: 1.8rem;
+  color: #050505;
+  margin-bottom: 1rem;
+}
+
+.adminDash_cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.adminDash_card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1.2rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+.adminDash_card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-3px);
+}
+
+.adminDash_cardTitle {
+  color: #fafae7;
+  margin-bottom: 0.5rem;
+}
+
+.adminDash_cardText {
+  color: #060606;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.adminDash_cardButton {
+  padding: 0.5rem 1rem;
+  background: #ff4d4f;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.adminDash_cardButton:hover {
+  background: #ff3b3d;
+}
+
+.adminDash_charts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.adminDash_chartCard {
+  background: #1e1f29;
+  padding: 1.5rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 460px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.adminDash_chartCard canvas {
+  flex: 1;
+  max-height: 280px;
+}
+
+.admin-home-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  padding: 10px 18px;
+  background-color: #454239;
+  color: #f9f6f6;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  z-index: 999;
+}
+
+.admin-home-button:hover {
+  background-color: #e29090;
+}
